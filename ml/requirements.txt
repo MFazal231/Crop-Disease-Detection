@@ -1,0 +1,6 @@
+kagglehub
+tensorflow
+tensorflowjs
+matplotlib
+scikit-learn
+

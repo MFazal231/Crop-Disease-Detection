@@ -1,0 +1,152 @@
+import type { DiseaseDatabase } from './types'
+import type { Translations } from './types'
+
+export const diseaseDatabase: DiseaseDatabase = {
+  'Tomato Late Blight': {
+    crop: 'Tomato',
+    severity: 'High',
+    symptoms: 'Dark brown spots on leaves, white fungal growth on undersides',
+    treatment: {
+      chemical: 'Apply Mancozeb or Chlorothalonil fungicide every 7-10 days',
+      organic: 'Remove infected leaves, apply copper-based fungicides, ensure proper air circulation',
+      prevention: 'Avoid overhead irrigation, plant resistant varieties, rotate crops',
+    },
+    confidence: 94,
+  },
+  'Potato Early Blight': {
+    crop: 'Potato',
+    severity: 'Medium',
+    symptoms: 'Concentric rings on older leaves, yellowing around spots',
+    treatment: {
+      chemical: 'Apply Azoxystrobin or Chlorothalonil fungicide',
+      organic: 'Remove infected leaves, apply neem oil, improve drainage',
+      prevention: 'Crop rotation, avoid water stress, mulching',
+    },
+    confidence: 89,
+  },
+  'Rice Blast': {
+    crop: 'Rice',
+    severity: 'High',
+    symptoms: 'Diamond-shaped lesions with gray centers on leaves',
+    treatment: {
+      chemical: 'Apply Tricyclazole or Carbendazim',
+      organic: 'Use resistant varieties, silicon fertilization',
+      prevention: 'Proper water management, balanced fertilization',
+    },
+    confidence: 91,
+  },
+  'Wheat Rust': {
+    crop: 'Wheat',
+    severity: 'High',
+    symptoms: 'Orange-red pustules on leaves and stems',
+    treatment: {
+      chemical: 'Apply Propiconazole or Tebuconazole',
+      organic: 'Remove infected plants, plant resistant varieties',
+      prevention: 'Early planting, remove volunteer wheat plants',
+    },
+    confidence: 87,
+  },
+  'Healthy Leaf': {
+    crop: 'Various',
+    severity: 'None',
+    symptoms: 'No visible disease symptoms detected',
+    treatment: {
+      chemical: 'No treatment needed',
+      organic: 'Continue regular care and monitoring',
+      prevention: 'Maintain good agricultural practices',
+    },
+    confidence: 96,
+  },
+  'Tomato Leaf Mold': {
+    crop: 'Tomato',
+    severity: 'Medium',
+    symptoms: 'Olive-green to gray fuzzy growth on underside of leaves',
+    treatment: {
+      chemical: 'Use chlorothalonil or copper-based fungicides',
+      organic: 'Improve air circulation, remove infected leaves',
+      prevention: 'Avoid overhead watering, resistant varieties',
+    },
+    confidence: 85,
+  },
+  'Corn Northern Leaf Blight': {
+    crop: 'Corn',
+    severity: 'High',
+    symptoms: 'Long gray-green lesions on leaves, reduced photosynthesis',
+    treatment: {
+      chemical: 'Apply strobilurin or triazole fungicides',
+      organic: 'Crop rotation, residue management',
+      prevention: 'Resistant hybrids, balanced fertilization',
+    },
+    confidence: 83,
+  },
+  'Grape Black Rot': {
+    crop: 'Grape',
+    severity: 'High',
+    symptoms: 'Circular brown lesions with black pycnidia on leaves and fruit',
+    treatment: {
+      chemical: 'Apply captan or myclobutanil',
+      organic: 'Prune infected tissue, improve airflow',
+      prevention: 'Sanitation, canopy management',
+    },
+    confidence: 84,
+  },
+}
+
+export const translations: Translations = {
+  en: {
+    title: 'AI Crop Disease Detection',
+    subtitle: 'Upload or capture leaf image for instant diagnosis',
+    upload: 'Upload Image',
+    camera: 'Use Camera',
+    analyzing: 'Analyzing...',
+    disease: 'Disease Detected',
+    crop: 'Crop',
+    severity: 'Severity',
+    confidence: 'Confidence',
+    symptoms: 'Symptoms',
+    treatment: 'Treatment',
+    chemical: 'Chemical',
+    organic: 'Organic',
+    prevention: 'Prevention',
+    newScan: 'New Scan',
+    selectLanguage: 'Language',
+  },
+  hi: {
+    title: 'एआई फसल रोग पहचान',
+    subtitle: 'तुरंत निदान के लिए पत्ती की तस्वीर अपलोड करें',
+    upload: 'फोटो अपलोड करें',
+    camera: 'कैमरा उपयोग करें',
+    analyzing: 'विश्लेषण हो रहा है...',
+    disease: 'रोग की पहचान',
+    crop: 'फसल',
+    severity: 'गंभीरता',
+    confidence: 'विश्वास स्तर',
+    symptoms: 'लक्षण',
+    treatment: 'उपचार',
+    chemical: 'रासायनिक',
+    organic: 'जैविक',
+    prevention: 'रोकथाम',
+    newScan: 'नई जांच',
+    selectLanguage: 'भाषा',
+  },
+  ta: {
+    title: 'AI பயிர் நோய் கண்டறிதல்',
+    subtitle: 'உடனடி நோய்க்கண்டறிதலுக்கு இலை படத்தை பதிவேற்றவும்',
+    upload: 'படத்தை பதிவேற்று',
+    camera: 'கேமராவைப் பயன்படுத்து',
+    analyzing: 'பகுப்பாய்வு செய்கிறது...',
+    disease: 'நோய் கண்டறியப்பட்டது',
+    crop: 'பயிர்',
+    severity: 'தீவிரம்',
+    confidence: 'நம்பிக்கை நிலை',
+    symptoms: 'அறிகுறிகள்',
+    treatment: 'சிகிச்சை',
+    chemical: 'இரசாயன',
+    organic: 'இயற்கை',
+    prevention: 'தடுப்பு',
+    newScan: 'புதிய ஸ்கேன்',
+    selectLanguage: 'மொழி',
+  },
+}
+
+
