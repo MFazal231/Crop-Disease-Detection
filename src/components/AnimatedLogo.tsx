@@ -10,7 +10,7 @@ interface AnimatedLogoProps {
 const AnimatedLogo = ({ className = '', size = 'md' }: AnimatedLogoProps) => {
   const letters = 'AgriFarm'.split('')
 
-  const getLetterVariants = (index: number) => ({
+  const getLetterVariants = () => ({
     initial: {
       scale: 1,
       textShadow: '0 0 0px rgba(67, 160, 71, 0)',
@@ -51,18 +51,18 @@ const AnimatedLogo = ({ className = '', size = 'md' }: AnimatedLogoProps) => {
         className="flex items-center"
         style={{ gap: '2px' }}
       >
-        {letters.map((letter, index) => (
+        {letters.map((letter) => (
           <motion.span
-            key={index}
-            variants={getLetterVariants(index)}
+            key={letter}
+            variants={getLetterVariants()}
             initial="initial"
             whileHover="hover"
             className={`font-bold ${textSize} ${
-              index < 4 ? 'text-agri-green' : 'text-agri-green-light'
+              letter === 'A' || letter === 'g' || letter === 'r' || letter === 'i' ? 'text-agri-green' : 'text-agri-green-light'
             }`}
             style={{
               display: 'inline-block',
-              color: index < 4 ? '#2e7d32' : '#43a047',
+              color: letter === 'A' || letter === 'g' || letter === 'r' || letter === 'i' ? '#2e7d32' : '#43a047',
               transformOrigin: 'center',
             }}
           >

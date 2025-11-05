@@ -14,6 +14,10 @@ import type { LanguageCode, PredictionResult } from './types'
 
 export default function CropDiseaseDetectorNew() {
   const [language, setLanguage] = useState<LanguageCode>('en')
+
+  const handleLanguageChange = (lang: string) => {
+    setLanguage(lang as LanguageCode)
+  }
   const [image, setImage] = useState<string | null>(null)
   const [prediction, setPrediction] = useState<PredictionResult | null>(null)
   const [analyzing, setAnalyzing] = useState(false)
@@ -111,7 +115,7 @@ export default function CropDiseaseDetectorNew() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#1a1a1a] via-[#2d4a2d] to-[#1a1a1a] text-white">
-      <AgriFarmNavbar language={language} setLanguage={setLanguage} t={t} />
+      <AgriFarmNavbar language={language} setLanguage={handleLanguageChange} />
 
       {/* Hero Section */}
       <Hero

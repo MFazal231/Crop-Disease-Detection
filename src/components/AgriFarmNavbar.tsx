@@ -1,12 +1,12 @@
 import { useState } from 'react'
+import type { LanguageCode } from '../features/crop-disease-detector/types'
 
 interface NavbarProps {
-  language: string
-  setLanguage: (lang: string) => void
-  t: any
+  language: LanguageCode
+  setLanguage: (lang: LanguageCode) => void
 }
 
-export default function AgriFarmNavbar({ language, setLanguage, t }: NavbarProps) {
+export default function AgriFarmNavbar({ language, setLanguage }: NavbarProps) {
   const [scrolled, setScrolled] = useState(false)
 
   // Handle scroll effect
@@ -38,7 +38,7 @@ export default function AgriFarmNavbar({ language, setLanguage, t }: NavbarProps
             </a>
             <select
               value={language}
-              onChange={(e) => setLanguage(e.target.value)}
+              onChange={(e) => setLanguage(e.target.value as LanguageCode)}
               className="px-4 py-2 bg-white/10 border border-green-500/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-green-500"
             >
               <option value="en">English</option>

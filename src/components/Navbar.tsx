@@ -1,4 +1,4 @@
-import { NavLink, useNavigate } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
@@ -6,7 +6,6 @@ import AnimatedLogo from './AnimatedLogo'
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const navigate = useNavigate()
 
   return (
     <motion.nav

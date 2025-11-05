@@ -10,16 +10,15 @@ import { diseaseDatabase, translations } from '../features/crop-disease-detector
 import { initModel, predictFromImage } from '@/lib/model'
 import { addHistory } from '../features/crop-disease-detector/history'
 import { getConfig } from '@/config/runtimeConfig'
-import type { LanguageCode, PredictionResult } from '../features/crop-disease-detector/types'
+import type { PredictionResult } from '../features/crop-disease-detector/types'
 
 export default function DiseaseDetection() {
-  const [language, setLanguage] = useState<LanguageCode>('en')
   const [image, setImage] = useState<string | null>(null)
   const [prediction, setPrediction] = useState<PredictionResult | null>(null)
   const [analyzing, setAnalyzing] = useState(false)
   const [labels, setLabels] = useState<string[] | null>(null)
 
-  const t = translations[language]
+  const t = translations['en']
 
   const diseases = useMemo(() => Object.keys(diseaseDatabase), [])
 
